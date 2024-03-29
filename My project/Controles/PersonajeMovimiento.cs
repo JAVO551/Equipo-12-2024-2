@@ -5,8 +5,6 @@ public class PersonajeMovimiento : MonoBehaviour
     public float velocidad;
     public float maxX;
     public float minX;
-    public float XIncrement;
-
     
 
     // Start is called before the first frame update
@@ -33,13 +31,6 @@ public class PersonajeMovimiento : MonoBehaviour
         newXPosition = Mathf.Clamp(newXPosition, minX, maxX);
         //Aplica la nueva posicion
         transform.position = new Vector2(newXPosition, transform.position.y);
-
-        //Experimento para aumentar en X
-        if (Input.GetKeyDown(KeyCode.UpArrow)){
-            transform.position=new Vector2(transform.position.x + XIncrement,transform.position.y);
-        } else if(Input.GetKeyDown(KeyCode.DownArrow)){
-            transform.position=new Vector2(transform.position.x - XIncrement,transform.position.y);
-        }
 
     }
 }
