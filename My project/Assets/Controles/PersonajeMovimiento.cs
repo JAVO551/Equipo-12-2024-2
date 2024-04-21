@@ -1,4 +1,5 @@
 using UnityEngine;
+
 public class PersonajeMovimiento : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -6,8 +7,6 @@ public class PersonajeMovimiento : MonoBehaviour
     public float maxX;
     public float minX;
     public float XIncrement;
-
-    
 
     // Start is called before the first frame update
     void Start()
@@ -22,24 +21,43 @@ public class PersonajeMovimiento : MonoBehaviour
         
     }
 
+
+    
+    void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.gameObject.tag =="Enemigo"){
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
+    }
+
+
+
+
     void MoverEnX()
     {
-        float inputMovimiento = Input.GetAxis("Horizontal"); // Corrige el nombre del método
-        rb.velocity = new Vector2(inputMovimiento * velocidad, rb.velocity.y); // Aplica la velocidad en el eje X
-        
-        //experimento para delimitar
+        float inputMovimiento = Input.GetAxis("Horizontal"); // Obtén el input horizontal
+
+        // Aplica la velocidad en el eje X
+        rb.velocity = new Vector2(inputMovimiento * velocidad, rb.velocity.y);
+
+        // Calcula la nueva posición en X
         float newXPosition = transform.position.x + inputMovimiento * velocidad * Time.deltaTime;
-        //Para que permanezca en el rango
+
+        // Limita la posición en X dentro del rango
         newXPosition = Mathf.Clamp(newXPosition, minX, maxX);
-        //Aplica la nueva posicion
-        transform.position = new Vector2(newXPosition, transform.position.y);
 
-        //Experimento para aumentar en X
-        if (Input.GetKeyDown(KeyCode.UpArrow)){
-            transform.position=new Vector2(transform.position.x + XIncrement,transform.position.y);
-        } else if(Input.GetKeyDown(KeyCode.DownArrow)){
-            transform.position=new Vector2(transform.position.x - XIncrement,transform.position.y);
-        }
+        // Aplica la nueva posición
+        //transform.position = new Vector2(newXPosition, transform.position.y);
 
+        // Aumenta o disminuye en X con teclas de flecha
+       // if (Input.GetKeyDown(KeyCode.UpArrow))
+       // {
+         //   transform.position = new Vector2(transform.position.x + XIncrement, transform.position.y);
+        //}
+        //else if (Input.GetKeyDown(KeyCode.DownArrow))
+        //{
+          //  transform.position = new Vector2(transform.position.x - XIncrement, transform.position.y);
+        //}
     }
 }
+
