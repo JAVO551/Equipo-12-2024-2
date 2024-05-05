@@ -45,19 +45,10 @@ public class PersonajeMovimiento : MonoBehaviour
 
         // Limita la posición en X dentro del rango
         newXPosition = Mathf.Clamp(newXPosition, minX, maxX);
+        
+        //Aplica la nueva posicion
+        transform.position = new Vector2(newXPosition, transform.position.y);
 
-        // Aplica la nueva posición
-        //transform.position = new Vector2(newXPosition, transform.position.y);
-
-        // Aumenta o disminuye en X con teclas de flecha
-       // if (Input.GetKeyDown(KeyCode.UpArrow))
-       // {
-         //   transform.position = new Vector2(transform.position.x + XIncrement, transform.position.y);
-        //}
-        //else if (Input.GetKeyDown(KeyCode.DownArrow))
-        //{
-          //  transform.position = new Vector2(transform.position.x - XIncrement, transform.position.y);
-        //}
     }
 }
 
