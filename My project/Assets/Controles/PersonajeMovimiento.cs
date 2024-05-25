@@ -7,6 +7,7 @@ public class PersonajeMovimiento : MonoBehaviour
     public float maxX;
     public float minX;
     public float XIncrement;
+    [SerializeField] private GameObject menuGameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,10 @@ public class PersonajeMovimiento : MonoBehaviour
         if(collision.gameObject.tag =="Enemigo"){
             Destroy(gameObject);
             Destroy(collision.gameObject);
+            Time.timeScale=0f;//pausar el juego
+            menuGameOver.SetActive(true);
+
+
         }
     }
 

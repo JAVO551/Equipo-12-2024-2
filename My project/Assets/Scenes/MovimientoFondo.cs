@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class MovimientoFondo : MonoBehaviour
 {
+    [Range(-2f,2f)]
     public float velocidad=1f;
+    private float offset;
+    private Material mat;
 
     // Start is called before the first frame update
     void Start()
     {
-    
+    mat=GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-    transform.Translate(Vector2.down*velocidad*Time.deltaTime);
-    if (transform.position.y<-10f){
-        ResetPosition();    
-    }
-    }
+    void Update(){
+        offset+=(Time.deltaTime*velocidad)/10f;
+        mat.SetTextureOffset("_MainTex",new Vector2(0,offset));
 
-    void ResetPosition(){
-        Vector3 currentPosition=transform.position;
-        transform.position=new Vector3(currentPosition.x,10f,currentPosition.z);
     }
+    
 }
