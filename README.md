@@ -5,9 +5,8 @@
 **Integrantes:**
 
 * Díaz Rivera Javier Enrique - Manager
-* Nombre Completo 2 - Rol 
-* Nombre Completo 3 - Rol
-* Nombre Completo 4 - Rol
+* Lombana Bermúdez Andrés Mauricio - Artista 
+* Ramírez Hilario Martin - Coder
 
 **Semestre:** 2024-2
 
@@ -15,7 +14,7 @@
 
 ## **Introducción:**
 
-En esta sección, describiré brevemente tu proyecto y el principal objetivo que espero lograr con su desarrollo.
+Este proyecto es un endless runner en 2D
 
 ## **Descripción del proyecto:**
 
