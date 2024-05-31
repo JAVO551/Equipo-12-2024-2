@@ -14,13 +14,11 @@
 
 ## **Introducción:**
 
-Este proyecto es un endless runner en 2D
+Este proyecto es un endless runner en 2D ambientado en las leyendas urbanas de nuestro metro de la CDMX. En este juego seras un conductor de un tren del metro que simplemente esta cumpliendo con su trabajo en un día aparentemente normal pero el tunel del metro empezara a parecer infinitamente largo el tramo entre una estación y otra, Durante esta aparente infinita travesia, extrañas creaturas empezaran a aparecer desde el fondo de la oscuridad más profunda del tunel del metro. Las leyenas eran ciertas, y ahora sera tu deber salir de este tunel y salvar a los pasajeros del vagon esquivando a estas extrañas creaturas. 
 
 ## **Descripción del proyecto:**
 
-En este apartado, incluiras una descripción detallada de cómo se llevó a cabo la creación de tu proyecto y las razones detrás de las decisiones que tomaste.
 
-Además, adjuntar al menos cinco imágenes que muestran el proceso de trabajo, junto con su correspondiente descripción del proyecto.
 
 ## **Conclusión:** 
 
